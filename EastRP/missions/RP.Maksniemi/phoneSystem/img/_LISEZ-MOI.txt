@@ -1,0 +1,2 @@
+Place ici les 14 images du téléphone converties en .paa (frame_ca.paa, wall0_ca.paa, ... voir le zip "images_telephone").
+Sans ces fichiers, le téléphone fonctionne quand même avec un dessin de secours (moins réaliste).

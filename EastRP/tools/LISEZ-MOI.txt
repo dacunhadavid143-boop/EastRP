@@ -1,0 +1,4 @@
+Outils (Python) pour reconstruire notre addon eastrp_core :
+  python icons.py                         -> redessine les icones (data\*_ca.paa)
+  python pbo.py ..\addons\eastrp_core ..\addons\eastrp_core.pbo eastrp_core   -> refait le .pbo
+Puis relancer modpack\construire_modpack.bat pour mettre le modpack a jour.

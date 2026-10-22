@@ -1,0 +1,15 @@
+class PHN_fnc_srvBank       { allowedTargets = 2; };
+class PHN_fnc_srvCall       { allowedTargets = 2; };
+class PHN_fnc_srvCallAnswer { allowedTargets = 2; };
+class PHN_fnc_srvCallEnd    { allowedTargets = 2; };
+class PHN_fnc_srvAdmin      { allowedTargets = 2; };
+class PHN_fnc_clientCall    { allowedTargets = 0; };
+class PHN_fnc_clientAdmin   { allowedTargets = 0; };
+class PHN_fnc_srvWaRegister   { allowedTargets = 2; };
+class PHN_fnc_srvWaProfile    { allowedTargets = 2; };
+class PHN_fnc_srvWaSend       { allowedTargets = 2; };
+class PHN_fnc_srvWaRead       { allowedTargets = 2; };
+class PHN_fnc_srvWaStatusPost { allowedTargets = 2; };
+class PHN_fnc_srvWaStatusDel  { allowedTargets = 2; };
+class PHN_fnc_srvWaContact    { allowedTargets = 2; };
+class PHN_fnc_clientWaIn      { allowedTargets = 0; };

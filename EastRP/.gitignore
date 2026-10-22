@@ -1,0 +1,13 @@
+server/server.cfg
+server/profiles/
+*.log
+*.rpt
+*.bidmp
+*.mdmp
+*.pbo
+*.bisign
+*.zip
+.vscode/
+
+# Cle privee de signature du modpack (NE JAMAIS PARTAGER)
+modpack/cle_privee/

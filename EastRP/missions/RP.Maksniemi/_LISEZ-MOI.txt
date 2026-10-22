@@ -1,0 +1,2 @@
+Place ici le fichier mission.sqm de ta mission Eden (carte Maksniemi).
+Ce dossier doit s'appeler RP.Maksniemi (nom de la mission + "." + nom interne de la carte).

@@ -1,0 +1,72 @@
+// description.ext : uniquement des #include (un par module)
+class Header { gameType = Sandbox; minPlayers = 1; maxPlayers = 10; };
+
+respawn = "BASE";
+respawnDelay = 5;
+respawnOnStart = -1;
+disabledAI = 1;
+
+// Console de debug (Échap en jeu) : réservée à l'admin connecté (#login mot_de_passe). METTRE 0 EN PRODUCTION.
+enableDebugConsole = 1;
+
+class CfgFunctions
+{
+    #include "spawnSystem\config\functions.hpp"
+    #include "idSystem\config\functions.hpp"
+    #include "coreSystem\config\functions.hpp"
+    #include "needSystem\config\functions.hpp"
+    #include "phoneSystem\config\functions.hpp"
+    #include "interactSystem\config\functions.hpp"
+    #include "ecoSystem\config\functions.hpp"
+    #include "jobSystem\config\functions.hpp"
+};
+
+// Whitelist remoteExec : chaque module ajoute SON fichier ici
+class CfgRemoteExec
+{
+    class Functions
+    {
+        mode = 1;
+        jip = 0;
+        #include "idSystem\config\remoteExec.hpp"
+        #include "coreSystem\config\remoteExec.hpp"
+        #include "needSystem\config\remoteExec.hpp"
+        #include "phoneSystem\config\remoteExec.hpp"
+        #include "interactSystem\config\remoteExec.hpp"
+        #include "ecoSystem\config\remoteExec.hpp"
+        #include "jobSystem\config\remoteExec.hpp"
+    };
+    class Commands { mode = 0; jip = 0; };
+};
+
+// Données / réglages
+#include "spawnSystem\config\settings.hpp"
+#include "spawnSystem\config\spawnPoints.hpp"
+#include "idSystem\config\settings.hpp"
+#include "coreSystem\config\settings.hpp"
+#include "needSystem\config\settings.hpp"
+#include "phoneSystem\config\settings.hpp"
+#include "interactSystem\config\settings.hpp"
+#include "ecoSystem\config\settings.hpp"
+#include "jobSystem\config\settings.hpp"
+
+// UI (classes de base d'abord)
+#include "idSystem\ui\base.hpp"
+#include "coreSystem\ui\base.hpp"
+#include "needSystem\ui\base.hpp"
+#include "phoneSystem\ui\base.hpp"
+#include "interactSystem\ui\base.hpp"
+#include "ecoSystem\ui\base.hpp"
+#include "jobSystem\ui\base.hpp"
+#include "spawnSystem\ui\dialog.hpp"
+#include "idSystem\ui\form.hpp"
+#include "phoneSystem\ui\dialog.hpp"
+#include "interactSystem\ui\dialog.hpp"
+#include "ecoSystem\ui\dialog.hpp"
+#include "jobSystem\ui\dialog.hpp"
+
+class RscTitles
+{
+    #include "idSystem\ui\hud.hpp"
+    #include "jobSystem\ui\hud.hpp"
+};

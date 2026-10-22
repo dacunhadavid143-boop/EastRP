@@ -1,0 +1,9 @@
+class JOB_fnc_srvSign { allowedTargets = 2; };
+class JOB_fnc_srvQuit { allowedTargets = 2; };
+class JOB_fnc_srvDuty { allowedTargets = 2; };
+class JOB_fnc_srvStep { allowedTargets = 2; };
+class JOB_fnc_srvAskSync { allowedTargets = 2; };
+class JOB_fnc_srvAnim { allowedTargets = 2; };
+class JOB_fnc_clientAnim { allowedTargets = 0; };
+class JOB_fnc_clientEject { allowedTargets = 1; };
+class JOB_fnc_clientItem { allowedTargets = 1; };

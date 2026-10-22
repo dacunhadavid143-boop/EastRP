@@ -1,0 +1,22 @@
+/* SERVEUR : première connexion au chat. Le numéro saisi doit être celui du téléphone. params: [unit, numéro saisi, nom, avatar(0-7), info] */
+if (!isServer) exitWith {};
+params [["_unit", objNull, [objNull]], ["_num", "", [""]], ["_name", "", [""]], ["_av", 0, [0]], ["_about", "", [""]]];
+private _ro = remoteExecutedOwner;
+if (isNull _unit || {!isPlayer _unit}) exitWith {};
+if (_ro != 0 && {_ro != owner _unit}) exitWith {};
+if !(_unit getVariable ["CORE_active", false]) exitWith {};
+private _msg = { params ["_m"]; [_m] remoteExec ["CORE_fnc_clientMsg", _unit]; };
+private _my = [_unit, "phone", ""] call CORE_fnc_getValue;
+if (_num != _my) exitWith { ["[Chat] Le numéro saisi ne correspond pas à votre téléphone."] call _msg; };
+_name = [_name, 25] call PHN_fnc_cleanText;
+_name = ((_name splitString " ") select { _x != "" }) joinString " ";
+_about = [_about, 80] call PHN_fnc_cleanText;
+if (_name == "") exitWith { ["[Chat] Saisissez un nom."] call _msg; };
+if (_about == "") then { _about = "Disponible"; };
+_av = ((floor _av) max 0) min 7;
+[_unit, "wa_reg", true] call CORE_fnc_setValue;
+PHN_profiles set [_my, [_name, _av, _about]];
+call PHN_fnc_srvWaSave;
+diag_log format ["[PHN] Chat : %1 inscrit (%2)", _name, _my];
+[_unit] call PHN_fnc_srvWaSync;
+call PHN_fnc_srvWaPush;

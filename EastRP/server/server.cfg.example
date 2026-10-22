@@ -1,0 +1,21 @@
+// Copie automatiquement en server.cfg au premier lancement (server.cfg n'est pas versionné)
+hostName = "EastRP - DEV";
+password = "";
+passwordAdmin = "CHANGE_MOI";
+maxPlayers = 10;
+verifySignatures = 0;
+BattlEye = 0;              // désactivé en développement
+persistent = 1;            // la mission continue sans joueur connecté
+disableVoN = 0;
+timeStampFormat = "short";
+logFile = "server_console.log";
+allowedFilePatching = 0;
+
+class Missions
+{
+    class Main
+    {
+        template = "RP.Maksniemi";     // = nom du dossier de mission (voir config.bat)
+        difficulty = "Regular";
+    };
+};
